@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Online JSON Validator and Formatter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="With Online JSON Validator and Formatter, you can beautyfy and format your JSON code written in JavaScript programming languages." />
+        <script>
+            if (window.location.protocol !== "https:")
+                window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+        </script>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href='//fonts.googleapis.com/css?family=Mate+SC' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel="shortcut icon" href="ico/favicon.ico">
+        <script src="js/jquery.min.js"></script>
+
+
+
+    </head>
+
+    <body>
+
+        <div class="container">
+            <br/>
+            <h1>Online JSON Validator and Formatter</h1>
+            <br/>
+            <p>With Online JSON Validator and Formatter, you can beautyfy and format your JSON code written in JavaScript programming languages. It is very easy, simple and time saving tool. </p>
+            <br/>
+            <div class="box-content">
+                <form id="JSONValidate" method="post" action="">
+                    <input type="hidden" id="reformat" value="1" />
+                    <input type="hidden" id="compress" value="0" />
+                    <div style="overflow: hidden;">
+                        <textarea id="json_input" name="json_input" class="json_input" spellcheck="false" placeholder="Enter JSON or a URL that you wish to validate."></textarea>
+                    </div>
+
+                    <div class="validateButtons clear">
+                        <div class="left">
+                            <button name="validate" id="validate" value="Validate" class="btn btn-primary" >Validate</button>
+                        </div>
+                        <div class="right small">
+                            </a>
+                        </div>
+                    </div>
+                </form>
+                <div id="results_header" class="hidemine">
+                    <h3>
+                        Results <img title="Loading..." class="reset" alt="Loading" src="loader.gif" id="loadSpinner" name="loadSpinner">
+                    </h3>
+                </div>
+                <pre id="results" class="hidemine"></pre>
+            </div>
+            <div style="margin:1em auto;width:336px">
+                Ad
+            </div>
+
+        </div>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/textarea.js" type="text/javascript"></script>
+        <link href="css/textarea.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="js/p.js"></script>
+        <script type="text/javascript" src="js/f.js"></script>
+        <script type="text/javascript" src="js/i.js"></script>
+
+        <style>
+            pre,code {
+                white-space:pre;
+                margin:1.5em 0;
+            }
+
+            pre,code,tt {
+                font:1em 'andale mono', monotype, 'lucida console', monospace;
+                line-height:1.5;
+            }
+
+            .hidemine {
+                display: none;
+            }
+            .error,.notice,.success {
+                margin-bottom:1em;
+                border:2px solid #ddd;
+                padding:.8em;
+            }
+
+            .error {
+                background:#FBE3E4;
+                color:#D12F19;
+                border-color:#FBC2C4;
+            }
+
+            .notice {
+                background:#FFF6BF;
+                color:#817134;
+                border-color:#FFD324;
+            }
+
+            .success {
+                background:#E6EFC2;
+                color:#529214;
+                border-color:#C6D880;
+            }
+
+            .error a {
+                color:#D12F19;
+            }
+
+            .notice a {
+                color:#817134;
+            }
+
+            .success a {
+                color:#529214;
+            }
+            .json_input {
+                width: 100%;
+                height: 300px;
+                margin: 0;
+                background-color: #EEEEEE;
+                border: 1px solid #EEEEEE;
+                padding: 0 !important;
+            }
+
+            .json_input:focus {
+                border-color: transparent;
+                outline: none;
+                background-color: #EEEEEE;
+            }
+
+            .linedwrap {
+                margin-bottom: 10px;
+                background-color: #EEEEEE;
+                padding: 0;
+            }
+
+
+            .linedwrap .codelines {
+                padding: 0;
+            }
+        </style>
+    </body>
+
+</html>
