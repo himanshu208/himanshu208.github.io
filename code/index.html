@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Online Code Beautifier for JavaScript, HTML, CSS and PHP</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Amit Agarwal - www.labnol.org">
+        <meta name="description" content="With Code Beautifier, you can pretty-print and syntax highlight source code written in JavaScript, HTML, CSS, PHP or other programming languages." />
+        <link rel="alternate" type="application/rss+xml" title="Digital Inspiration" href="http://feeds.labnol.org/labnol" />
+        <script>
+            if (window.location.protocol !== "https:")
+                window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+        </script>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href='//fonts.googleapis.com/css?family=Mate+SC' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+        <link href="code/beautify.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel="shortcut icon" href="ico/favicon.ico">
+        <script src="js/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="css/codemirror.css">
+        <script src="js/codemirror.js"></script>
+        <script src="js/formatting.js"></script>
+        <script src="js/css.js"></script>
+        <script src="js/xml.js"></script>
+        <script src="js/javascript.js"></script>
+        <script src="js/htmlmixed.js"></script>
+
+
+    </head>
+
+    <body>
+  
+        <div class="container">
+
+            <h2><a href="#">Source Code Beautifier</a></h2>
+
+            <div class="control-group help">
+                Copy-paste any obfuscated piece of source code and the online beautifier will prettify and syntax-highlight the code making it easier to read and understand.. <a href="#info" data-toggle="modal">learn more &rarr;</a>
+            </div>
+
+            <style>
+                .CodeMirror {
+                    border: 1px solid #C0C0C0;
+                    height: auto;
+                    font-family: 'Source Code Pro', monospace;
+                }
+
+                .CodeMirror-empty {
+                    outline: 1px solid #c22;
+                }
+
+                .CodeMirror-empty.CodeMirror-focused {
+                    outline: none;
+                }
+
+                .CodeMirror pre.CodeMirror-placeholder {
+                    color: #999;
+                }
+            </style>
+            <form class="form-horizontal well">
+                <div class="control-group">
+                    <textarea id="code" name="code" placeholder="Copy-paste your source code here..">
+<!-- Sample Source Code -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>ctrlq</title>
+</head>
+
+<body><h1>Hello World</h1></body>
+
+</html> </textarea>
+                </div>
+                <div class="control-group">
+                    <div class="controls2">
+                        <a href="#" onclick="autoFormat();
+                return false;" class="btn btn-inverse btn-large"><i class="icon-white icon-camera"></i> Beautify Code</a>
+                    </div>
+                </div>
+            </form>
+
+            <script>
+                var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                    lineNumbers: true,
+                    lineWrapping: false,
+                    viewportMargin: Infinity,
+                    autofocus: true,
+                    mode: "htmlmixed"
+                });
+
+                function autoFormat() {
+                    CodeMirror.commands["selectAll"](editor);
+                    editor.autoFormatRange(editor.getCursor(true), editor.getCursor(false));
+                    editor.setCursor(0);
+                }
+            </script>
+            <div style="margin:1em auto;width:336px">
+                Ad
+            </div>
+
+        </div>
+
+        <div class="platforms">
+            <a href="#">Twitter</a> |
+            <a href="#">Tech Blog</a> |
+            <a href="#">Video Tutorials</a>
+        </div>
+
+
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+
+</html>
