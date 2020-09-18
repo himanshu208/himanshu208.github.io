@@ -477,8 +477,7 @@
                             }
                         }
                         ;
-                       // c.open("GET", "//passwordsgenerator.net/calc.php?Length=" + b + "&Symbols=" + a + "&Lowercase=" + g + "&Uppercase=" + l + "&Numbers=" + p + "&Nosimilar=" + f + "&Last=" + m, true);
-                        //c.send()
+                 
                     }
                 }
             }
@@ -624,7 +623,7 @@
                 if ($("AutoSelect").checked)
                     au = 1;
 
-                var strLink = "//passwordsgenerator.net/?";
+                var strLink = "";
                 strLink += "length=" + le;
                 strLink += "&symbols=" + sy;
                 strLink += "&numbers=" + nu;
@@ -688,12 +687,7 @@
             function scroll2top() {
                 window.scrollTo(0, 0);
             }
-            function SelCountry() {
-                var strCountry = $("idCountry").value;
-                if (strCountry != "en"){
-                 //   window.location.href = "//passwordsgenerator.net/" + strCountry;
-				 }
-            }
+          
         </script>
     </head>
     <body onload="Init();">
